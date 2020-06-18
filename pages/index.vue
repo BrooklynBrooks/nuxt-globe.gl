@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- <div>
-      <h2>1111111111</h2>
-    </div> -->
     <div id="globeViz"></div>
   </div>
 </template>
@@ -10,7 +7,6 @@
 <script>
 import Globe from 'globe.gl'
 import * as d3 from 'd3'
-// import * as axios from '@nuxtjs/axios'
 
 export default {
   components: {},
