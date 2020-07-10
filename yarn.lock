@@ -1481,6 +1481,14 @@ acorn@^7.1.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.3.1.tgz#85010754db53c3fbaf3b9ea3e083aa5c5d147ffd"
   integrity sha512-tLc0wSnatxAQHVHUapaHdz72pi9KUyHjq5KyHjGg9Y8Ifdc79pTh2XvI6I1/chZbnM7QtNKzh66ooDogPZSleA==
 
+aframe-globe-component@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.2.1.tgz#ffd5f551ce8a74b3c974f39e0f5f5775dd091dbd"
+  integrity sha512-jBZsaBhkN52oIhenIs7G2mT5HtrIEF+wruYZt4AILUDWIv9PEquaWkJS3JTEj6SxAAiVGoVsNhiCT1IPTbS4Lw==
+  dependencies:
+    accessor-fn "^1.3.0"
+    three-globe "^2.7.0"
+
 aggregate-error@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.0.1.tgz#db2fe7246e536f40d9b5442a39e117d7dd6a24e0"
@@ -4318,6 +4326,14 @@ globals@^12.1.0:
   integrity sha512-BWICuzzDvDoH54NHKCseDanAhE3CeDorgDL5MT6LMXXj2WCnd9UC2szdk4AWLfjdgNBCXLUanXYcpBBKOSWGwg==
   dependencies:
     type-fest "^0.8.1"
+
+globe-ar@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/globe-ar/-/globe-ar-1.2.0.tgz#b90e3929ffd9429fc0f6b4718846bd2a724eb926"
+  integrity sha512-Aud8smh+JyPtwHJbsjDjkouQV8nOCYQdwTqo1uW/cr+6kLvOXnjdc8N3ROzx1F2jZCRy0F7I/bJ0JB3jKYZOHw==
+  dependencies:
+    aframe-globe-component "^1.2.0"
+    kapsule "^1.13.3"
 
 globe.gl@^2.10.3:
   version "2.10.3"
@@ -8310,7 +8326,7 @@ three-geojson-geometry@^1.1.0:
   dependencies:
     earcut "^2.2.2"
 
-three-globe@^2.7.2:
+three-globe@^2.7.0, three-globe@^2.7.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.7.2.tgz#ce934585947561c4c0060ce2c45613a576761c36"
   integrity sha512-PurJlGJa9gw/kDJ4qXawNIDkK0wC6jmfCLxB7NgZXr6eAy/JtfJlkWlio2QSYgqEZt96g4YRLnNrxGeVBAVS8Q==
@@ -8351,6 +8367,11 @@ three@^0.116.1:
   version "0.116.1"
   resolved "https://registry.yarnpkg.com/three/-/three-0.116.1.tgz#a393f7a81fdc3e2fbf57ded5ba47dc5bd3678ce0"
   integrity sha512-l2JCMiA/lVZAuSrLWRYMalvpR+0j8hbIhCpfs4V6JFnw2+JQEQJ5HltNpfFr+9TDpQts1BhtcISehWf/xBGPvQ==
+
+three@^0.117.1:
+  version "0.117.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.117.1.tgz#a49bcb1a6ddea2f250003e42585dc3e78e92b9d3"
+  integrity sha512-t4zeJhlNzUIj9+ub0l6nICVimSuRTZJOqvk3Rmlu+YGdTOJ49Wna8p7aumpkXJakJfITiybfpYE1XN1o1Z34UQ==
 
 through2@^2.0.0:
   version "2.0.5"

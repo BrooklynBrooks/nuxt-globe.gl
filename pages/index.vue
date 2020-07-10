@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="globeViz"></div>
+    <div :id="globeVisId"></div>
   </div>
 </template>
 
@@ -15,28 +15,33 @@ export default {
       'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson'
     const res = await $axios.$get(url)
     return {
-      ddd: res
+      geoData: res
     }
   },
   data() {
     return {
-      globe: Globe()
+      globe: Globe(),
+      // globeImageUrl: '//unpkg.com/three-globe/example/img/earth-dark.jpg',
+      globeImageUrl: '../hoge.png',
+      globeVisId: 'globeViz',
+      backgroundColor: '#e5e5e5'
     }
   },
   mounted() {
-    const s = document.getElementById('globeViz')
+    const globeElem = document.getElementById(this.globeVisId)
     const weightColor = d3
       .scaleLinear()
       .domain([0, 60])
-      .range(['lightblue', 'darkred'])
+      .range(['red', 'yellow'])
       .clamp(true)
 
-    this.globe(s)
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+    this.globe(globeElem)
+      .globeImageUrl(this.globeImageUrl)
+      .backgroundColor(this.backgroundColor)
       .hexBinPointLat((d) => d.geometry.coordinates[1])
       .hexBinPointLng((d) => d.geometry.coordinates[0])
       .hexBinPointWeight((d) => d.properties.mag)
-      .hexAltitude(({ sumWeight }) => sumWeight * 0.0025)
+      .hexAltitude(({ sumWeight }) => sumWeight * 0.001)
       .hexTopColor((d) => weightColor(d.sumWeight))
       .hexSideColor((d) => weightColor(d.sumWeight))
       .hexLabel(
@@ -50,7 +55,7 @@ export default {
         </li></ul>
       `
       )
-    this.globe.hexBinPointsData(this.ddd.features)
+    this.globe.hexBinPointsData(this.geoData.features)
   }
 }
 </script>
