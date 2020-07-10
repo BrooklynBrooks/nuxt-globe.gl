@@ -1,3 +1,6 @@
+![thumbnail](https://user-images.githubusercontent.com/38906043/87181705-b8326600-c31d-11ea-8cda-0a1683a880ee.png)
+
+
 # nuxt-globe.gl
 
 > globe.gl for Nuxt
