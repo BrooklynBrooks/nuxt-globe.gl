@@ -1,6 +1,6 @@
-# bbearth
+# nuxt-globe.gl
 
-> Brooklyn Brooks first project
+> globe.gl for Nuxt
 
 ## Build Setup
 
